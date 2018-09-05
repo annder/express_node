@@ -6,9 +6,11 @@ app.set("view options", {
     debug: process.env.NODE_NEV = "production"
 })
 app.get("/", function (req, res) {
-    res.send("Hello");
-})
-app.get("/:a", function (req, res) {
     res.render("index.art");
+})
+app.get("/about", function (req, res) {
+    res.render("about.art",{
+       name:"annter"
+    });
 })
 app.listen(8080);
